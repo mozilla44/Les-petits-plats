@@ -1,0 +1,99 @@
+CSS EN PREMIER !
+
+ étape 0 => toutes les cartes 
+ apres recherche cacher les mauavaises 
+ carte type + remplisage 
+ vant recherche =< toutes les cartes (recipe.js)
+
+
+
+
+- quel event listener ? input (smartphone)  + keyup (partout)
+
+pas recherche si < 3 cara 
+si retour à 0 cara => afficher liste commlete
+
+1 ) creer cartes 
+2) filtrer cartes 
+
+
+
+
+
+
+
+
+
+
+
+
+
+cards + remplisage
+function recherche + new array 
+function qui traite le tableau
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+fiche investigation pas forcement début 
+1 seul algorigrame
+combo box juste pour filtrer recherche principale . 
+scenrios alternatifs dans algorigramme (juste A1)
+developper reccherceh (a lgorigramme )
+
+-- finir algo
+-- commencer dev recherche principale 
+-- branches git
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CDN ou download bootstrap ? -- download
+garder hash dans balises? -- oui si cdn 
+bootstrap obligé ? - non
+ecire dans dropdown ? -- combo box 
+ 
+
+fiche investigation (1,2 3)
+
+pas image dns cards 
+
+fonctionnel (pas de technique)
+haut vers le bas ( pas de branches d)

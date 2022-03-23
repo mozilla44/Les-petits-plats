@@ -1,0 +1,28 @@
+.red {
+    color: #D04F4F;
+    font-size: 1.5em;
+}
+
+.small {
+    height: 3em;
+    width: 3em;
+}
+
+#recipe-area {
+    display: flex;
+    flex-direction: row;
+    /* border: 3px solid green; */
+    justify-content: space-between;
+}
+
+.recipe_card {
+    border: 3px solid black;
+    width: 30%;
+}
+
+.recipe_image {
+    color: grey;
+    background-color: grey;
+    height: 8em;
+    width: 100%;
+}
