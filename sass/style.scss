@@ -1,0 +1,47 @@
+header {
+    .banner-title {
+        color: #d04f4f;
+        font-size: 1.5em;
+    }
+
+    .logo {
+        height: 3em;
+        width: 3em;
+    }
+}
+
+main {
+    #recipe-area {
+        margin-top: 2em;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-content: space-between;
+        border: 3px solid green;
+    }
+
+    .recipe_card {
+        border: 3px solid black;
+        width: 30%;
+    }
+
+    .recipe_image {
+        color: grey;
+        background-color: grey;
+        /* height: 45%; */
+        width: 100%;
+    }
+    .recipe-intro {
+        border: 3px solid red;
+    }
+    .ingredients {
+        border: 3px solid purple;
+    }
+    .quantity {
+        border: 3px solid yellow;
+    }
+    .unit {
+        border: 3px solid salmon;
+    }
+}

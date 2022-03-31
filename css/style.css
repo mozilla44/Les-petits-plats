@@ -1,0 +1,56 @@
+header .banner-title {
+  color: #d04f4f;
+  font-size: 1.5em;
+}
+
+header .logo {
+  height: 3em;
+  width: 3em;
+}
+
+main #recipe-area {
+  margin-top: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+  border: 3px solid green;
+}
+
+main .recipe_card {
+  border: 3px solid black;
+  width: 30%;
+}
+
+main .recipe_image {
+  color: grey;
+  background-color: grey;
+  /* height: 45%; */
+  width: 100%;
+}
+
+main .recipe-intro {
+  border: 3px solid red;
+}
+
+main .ingredients {
+  border: 3px solid purple;
+}
+
+main .quantity {
+  border: 3px solid yellow;
+}
+
+main .unit {
+  border: 3px solid salmon;
+}
+/*# sourceMappingURL=style.css.map */

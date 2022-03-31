@@ -1,4 +1,37 @@
-CSS EN PREMIER !
+coomment avoir la meme taille pour les cartes sans donner une taille immense par defaut ? 
+coment trouver la bonne unité pour les ingredients ? 
+refonte html pour pouvir styliser corectement ?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
  étape 0 => toutes les cartes 
  apres recherche cacher les mauavaises 
