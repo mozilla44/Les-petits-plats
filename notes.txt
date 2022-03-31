@@ -1,10 +1,10 @@
 coomment avoir la meme taille pour les cartes sans donner une taille immense par defaut ? 
-coment trouver la bonne unité pour les ingredients ? 
-refonte html pour pouvir styliser corectement ?
-
-
-
-
+font awesome march pas (clcok icon)
+mise en page nombre de cards non egal 
+pq map ingredients ? 
+comment faire un elipse ? 
+comment mttre les ingredients et la recette 50/50 sans casser la mep
+donnéed manquantes database 
 
 
 

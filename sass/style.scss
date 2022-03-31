@@ -11,6 +11,7 @@ header {
 }
 
 main {
+    min-width: 100vw;
     #recipe-area {
         margin-top: 2em;
         display: flex;
@@ -18,30 +19,55 @@ main {
         flex-wrap: wrap;
         justify-content: space-around;
         align-content: space-between;
-        border: 3px solid green;
     }
+
+    
 
     .recipe_card {
         border: 3px solid black;
-        width: 30%;
-    }
+        width: 25em;
+        border-radius: 10px;
+        margin: 1em 0 1em 0;
+        .recipe_image {
+            width: 100%;
+            background-color: grey;
+            height: 10em;
+            
+        }
+        .recipe-intro {
+            display: flex;
+            margin-left: 1em;
+            margin-right: 1em;
+            .recipe-name {
+                width: 75%;
+                font-weight: 600;
+            }
+        }
+        .all-ingredients {
+            border: 3px solid red;
+            /* width: 50%; */
+            
+        }
+        .ingredients {
+            max-width: 70%;
+            display: flex;
+            font-weight: 600;
+            font-size: 0.7em;
+            text-align: center;
+        }
+        .quantity {
+            margin-left: 0.5em;
+            text-align: center;
+        }
+        .unit {
+            text-align: center;
+            
+        }
+        .recipe_instructions {
+            border: 3px solid blue;
+            /* width: 50%; */
+        }
 
-    .recipe_image {
-        color: grey;
-        background-color: grey;
-        /* height: 45%; */
-        width: 100%;
-    }
-    .recipe-intro {
-        border: 3px solid red;
-    }
-    .ingredients {
-        border: 3px solid purple;
-    }
-    .quantity {
-        border: 3px solid yellow;
-    }
-    .unit {
-        border: 3px solid salmon;
     }
 }
+    
