@@ -9,6 +9,7 @@ function searchRecipe() {
     let x = document.getElementsByClassName('recipe_card');
     let result = []; 
     
+    
     for (i = 0; i < x.length; i++) { 
         x[i].style.display="none";
         if (x[i].innerHTML.toLowerCase().includes(input)) {
