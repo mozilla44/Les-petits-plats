@@ -10,13 +10,14 @@ export default class Recipe {
     </div>
     <div class="recipe-intro">
     <div class="recipe-name">${this.name}</div>
-    <i class="fa-light fa-clock"></i>
-    <div class="recipe-time">&nbsp;${this.time}&nbsp;mn</div>
+    <i class="fas fa-clock"></i>
+    <div class="recipe-time">&nbsp;${this.time}mn</div>
     </div>
+    <div class ="recipe-details">
     <div class="all-ingredients">${this.ingredients.map(ingredient => {
-      let ingredientDom = `<div class="ingredients">${ingredient.ingredient}:&nbsp;`
+      let ingredientDom = `<div class="ingredients"><div class="name">${ingredient.ingredient}</div>`
       if (ingredient.quantity){
-          ingredientDom += `<div class="quantity">${ingredient.quantity}&nbsp;</div>`
+          ingredientDom += `: <div class="quantity">${ingredient.quantity}</div>`
       }
       if (ingredient.unit){
           ingredientDom += `<div class="unit">${ingredient.unit}</div>`
@@ -26,6 +27,7 @@ export default class Recipe {
       
     }).join("")}</div>
     <div class="recipe_instructions">${this.description}</div>
+    </div>
 </div>`
 
     }

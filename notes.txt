@@ -1,10 +1,10 @@
-coomment avoir la meme taille pour les cartes sans donner une taille immense par defaut ? 
-font awesome march pas (clcok icon)
-mise en page nombre de cards non egal 
-pq map ingredients ? 
-comment faire un elipse ? 
-comment mttre les ingredients et la recette 50/50 sans casser la mep
-donnéed manquantes database 
+
+appeler toutes les fonctions de rechercehs quand input ? 
+mettre toutes les fonctions dans 1 seule ? 
+property ? 
+creer tableaux vides? 
+
+
 
 
 

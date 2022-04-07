@@ -23,15 +23,17 @@ main #recipe-area {
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 5%;
   -ms-flex-line-pack: justify;
       align-content: space-between;
 }
 
 main .recipe_card {
   background-color: #e6e6e6;
-  width: 25em;
+  width: 30%;
   border-radius: 10px;
   margin: 1em 0 1em 0;
 }
@@ -47,8 +49,12 @@ main .recipe_card .recipe-intro {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-left: 1em;
+  margin-left: 0.7em;
   margin-right: 1em;
+  margin-bottom: 0.7em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 main .recipe_card .recipe-intro .recipe-name {
@@ -57,8 +63,7 @@ main .recipe_card .recipe-intro .recipe-name {
 }
 
 main .recipe_card .all-ingredients {
-  border: 3px solid red;
-  /* width: 50%; */
+  width: 50%;
 }
 
 main .recipe_card .ingredients {
@@ -66,7 +71,8 @@ main .recipe_card .ingredients {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-weight: 600;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   font-size: 0.7em;
   text-align: center;
 }
@@ -81,7 +87,23 @@ main .recipe_card .unit {
 }
 
 main .recipe_card .recipe_instructions {
-  border: 3px solid blue;
-  /* width: 50%; */
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  width: 50%;
+  font-size: smaller;
+  margin-right: 0.8em;
+  text-align: justify;
+}
+
+.recipe-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.ingredients .name {
+  font-weight: bold;
 }
 /*# sourceMappingURL=style.css.map */
