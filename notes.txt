@@ -1,6 +1,9 @@
 
+recherche WTF ?? ( ex: "coco" marche mais n'affiche qu' 1 seul resultat / "poulet" marche pas)
+
 appeler toutes les fonctions de rechercehs quand input ? 
 mettre toutes les fonctions dans 1 seule ? 
+
 property ? 
 creer tableaux vides? 
 

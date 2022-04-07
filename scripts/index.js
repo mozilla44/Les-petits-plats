@@ -33,14 +33,14 @@ function displayRecipe (listRecipe){
 }
 
 let searchbar = document.getElementById('search-bar');
-searchbar.addEventListener("keyup" ,searchRecipe )
+searchbar.addEventListener("keyup" ,searchRecipe)
 
 
 /* search by ingredient */
 
 
 
-function SearchIngredients (){
+/* function SearchIngredients (){
     let input = document.getElementById('search-bar').value
     input=input.toLowerCase();
     let x = document.getElementsByClassName('recipe_card');
@@ -56,11 +56,11 @@ function SearchIngredients (){
     
     
     displayRecipe(result)
-}
+} */
 
 /* search by description */
 
-function SearchDescription (){
+/* function SearchDescription (){
     let input = document.getElementById('search-bar').value
     input=input.toLowerCase();
     let x = document.getElementsByClassName('recipe_card');
@@ -76,7 +76,16 @@ function SearchDescription (){
     
     
     displayRecipe(result)
-}
+} */
+
+/* eventlistener with all search functions */
+
+/* searchbar.addEventListener("keyup" ,() => {
+    searchRecipe();
+    SearchIngredients();
+    SearchDescription();
+
+}) */
 
 
 
