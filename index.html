@@ -22,7 +22,9 @@
 
 <body>
     <header class="container mb-3 mt-5 d-flex flex-column align-items-center">
+      <a href="#">
         <img alt="logo" src="./images/Vector.png" class="logo">
+      </a>
         <h1 class="banner-title red">Les petits plats</h1>
     </header>
 
@@ -31,34 +33,38 @@
             <!--Search bar-->
             <form class="form-inline mb-3">
                 <input class="form-control col" id="search-bar" type="search" name="search-bar"
-                    placeholder="Rechercher une recette" aria-label="Search">
+                    placeholder="Rechercher une recette" aria-label="Search" autocomplete="off">
             </form>
 
             <!-- dropdowns-->
-            <div id="ingredients">
-                <div class="title">
+           
+            <div id="dropdowns">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Ingrédients
-                </div>
-                <input type="text" placeholder=" Rechercher un ingrédient..">
-            </div>
-
-            <div id="appareils">
-                Appareils
-            </div>
-
-            <input type="text" placeholder=" Rechercher un appareil..">
-
-            </div>
-
-
-            <div id="ustensiles">
-                <div class="drop__title">
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
+                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Appareils
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
+                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Ustensiles
-                </div>
-                <input type="text" placeholder=" Rechercher un ustensile..">
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
             </div>
-
-
+           
         </nav>
         <section id="recipe-area">
         </section>
