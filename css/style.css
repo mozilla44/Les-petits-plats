@@ -1,3 +1,4 @@
+@charset "UTF-8";
 header .banner-title {
   color: #d04f4f;
   font-size: 1.5em;
@@ -106,4 +107,59 @@ main .recipe_card .recipe_instructions {
 .ingredients .name {
   font-weight: bold;
 }
+
+#combos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 2em;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+
+.combobox {
+  border-radius: 10px;
+  color: white;
+  padding: 1em;
+  max-height: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  /* flex-wrap: wrap; */
+  /* height: 3.5em; */
+}
+
+.combo {
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: white;
+}
+
+.combobox[data-text="ingrédients"] {
+  background-color: #0081FF;
+}
+
+.combobox[data-text="appareils"] {
+  background-color: #20DDA0;
+}
+
+.combobox[data-text="ustensiles"] {
+  background-color: #FF584B;
+}
+
+/* .combolist {
+    display: flex;
+    flex-wrap: wrap;
+} */
 /*# sourceMappingURL=style.css.map */

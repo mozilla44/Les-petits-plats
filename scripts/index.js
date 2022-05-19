@@ -140,6 +140,12 @@ function GetFilteredAppliances(listRecipe) {
 function displayCombo (listRecipe){
     let filterIngredient = GetFIlteredIngredients(listRecipe);
     let combo = new combobox(document.querySelector(`.combobox[data-list="ingredient"]`),filterIngredient)
+
+    let filterAppliance = GetFilteredAppliances(listRecipe);
+    let combo2 = new combobox(document.querySelector(`.combobox[data-list="appliance"]`),filterAppliance)
+
+    let filterUstensil = GetFIlteredUstensils(listRecipe);
+    let combo3 = new combobox(document.querySelector('.combobox[data-list="ustensils"]'),filterUstensil);
 }
 
 displayCombo(recipes);

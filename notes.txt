@@ -1,9 +1,9 @@
+3 colonnes css 
+fleche (chevron)
 
-faire pareil avec unstesiles et appliance ( ajouter div + ajouter dans showcombo())
- faire css combobox 
- 
 
-mettre les div dans une div pour le css ? 
+
+
 
  
 

@@ -2,4 +2,15 @@
   border: 3px solid red;
   border-radius: 15px;
 }
+
+#combos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  border: 3px solid green;
+}
 /*# sourceMappingURL=combobox.css.map */
