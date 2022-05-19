@@ -158,8 +158,26 @@ main .recipe_card .recipe_instructions {
   background-color: #FF584B;
 }
 
-/* .combolist {
-    display: flex;
-    flex-wrap: wrap;
-} */
+.comboList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0px 20px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-height: 500px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.searchbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
 /*# sourceMappingURL=style.css.map */

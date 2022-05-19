@@ -125,7 +125,15 @@ main {
     background-color: #FF584B;
 }
 
-/* .combolist {
+.comboList {
     display: flex;
+    gap: 0px 20px;
     flex-wrap: wrap;
-} */
+    max-height: 500px;
+    flex-direction: column;
+}
+
+.searchbox {
+    display: flex;
+    align-items: center;
+}

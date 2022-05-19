@@ -5,10 +5,14 @@ class combobox {
         this.element = element;
         this.list = list;
         this.element.innerHTML= "";
+        this.searchbox = document.createElement("div")
+        this.searchbox.classList.add("searchbox")
 
         this.input = document.createElement("input");
         this.input.classList.add("combo");
-        this.element.appendChild(this.input);
+        this.searchbox.appendChild(this.input);
+        this.searchbox.insertAdjacentHTML('beforeend', '<i class="fas fa-chevron-down"></i>');
+        this.element.appendChild(this.searchbox)
         this.text = this.element.dataset.text.substring(0,1).toUpperCase() + this.element.dataset.text.substring(1)
         this.input.setAttribute("placeholder" , "Rechercher un " + this.element.dataset.text)
         this.input.value = this.text
