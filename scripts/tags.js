@@ -2,8 +2,6 @@ const listOfIngredients = [];
 const listOfAppliances = [];
 const listOfUtensils = [];
 
-/* push  */
-/*  foreach ?  */
 
 
 /* rechercher dans la liste filtrée  */
@@ -21,5 +19,7 @@ function searchIngredient(input) {
 document.querySelectorAll('[data-component="combobox"]').forEach(element => {
     var p1 = new Combobox(element);
 })
+
+
 
 

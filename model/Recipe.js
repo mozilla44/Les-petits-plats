@@ -1,4 +1,4 @@
-export default class Recipe {
+class Recipe {
     constructor(recipe) {
         Object.assign(this, recipe)
     }

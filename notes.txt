@@ -1,19 +1,57 @@
-3 colonnes css 
+
+finir breakpointsq css
+laceholder 
+tester chrome etc 
+
+finir fctn tri tags 
 
 
-ou
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+tableau avec tag dasn variable ( enregister tags ajoutés) => save valeur + type de tag
+objet avec value + type
+parcourir tag + filter
+
+
+ 
+
 
 
 
 
  
 
-I67197 + NOM
 
 
 
 
-
+ 
 
 
 

@@ -1,10 +1,12 @@
 
 
 class combobox {
-    constructor(element, list) {
+    constructor(element,filter) {
+        this.filter = filter;
+        this.listTags = [];
         this.element = element;
-        this.list = list;
-        this.element.innerHTML= "";
+        this.list = [];
+        this.element.innerHTML = "";
         this.searchbox = document.createElement("div")
         this.searchbox.classList.add("searchbox")
 
@@ -13,8 +15,8 @@ class combobox {
         this.searchbox.appendChild(this.input);
         this.searchbox.insertAdjacentHTML('beforeend', '<i class="fas fa-chevron-down"></i>');
         this.element.appendChild(this.searchbox)
-        this.text = this.element.dataset.text.substring(0,1).toUpperCase() + this.element.dataset.text.substring(1)
-        this.input.setAttribute("placeholder" , "Rechercher un " + this.element.dataset.text)
+        this.text = this.element.dataset.text.substring(0, 1).toUpperCase() + this.element.dataset.text.substring(1)
+        this.input.setAttribute("placeholder", "Rechercher un " + this.element.dataset.text)
         this.input.value = this.text
         this.comboList = document.createElement("div");
         this.comboList.classList.add("comboList");
@@ -25,19 +27,21 @@ class combobox {
             this.showCombo()
         })
         this.input.addEventListener("focus", () => {
-            if (this.input.value == this.text){
+            if (this.input.value == this.text) {
                 this.input.value = "";
             }
-            
+
             this.showCombo();
         })
 
-        this.input.addEventListener("blur", () => {
-            if (this.input.value == ""){
-                this.input.value = this.text;
+        document.addEventListener("click", (event) => {
+            if ((event.target.classList != undefined && event.target.classList.contains(".combobox") && event.target != this.element) || (event.target.closest(".combobox") != this.element)) {
+                if (this.input.value == "") {
+                    this.input.value = this.text;
+                }
+
+                this.hideCombo()
             }
-            
-            this.hideCombo();
         })
     }
 
@@ -49,12 +53,43 @@ class combobox {
         for (let option of filteredList) {
             this.comboList.insertAdjacentHTML("beforeend", `<div class="option" data-value="${option}">${option}</div>`);
         }
+        this.addTag()
+        this.searchbox.querySelector(".fas").classList.add("rotate")
 
     }
 
-    hideCombo (){
+    hideCombo() {
         this.comboList.querySelectorAll(".option").forEach(element => {
             element.remove()
         });
+        this.searchbox.querySelector(".fas").classList.remove("rotate")
+    }
+
+    addTag() {
+        this.comboList.querySelectorAll('.option').forEach(element => {
+            element.addEventListener("click", (event) => {
+
+                var tag = {
+                    value :event.target.dataset.value,
+                    type:event.target.closest(".combobox").dataset.list
+                };
+                var tagBtn = document.createElement('div');
+                tagBtn.innerHTML =  tag.value + `<i class="fas fa-times"></i>`;
+                tagBtn.classList.add("activated-tag")
+                tagBtn.classList.add(event.target.closest(".combobox").dataset.list)
+                document.getElementById("tags-area").appendChild(tagBtn)
+                console.log(event.target.dataset.value)
+                this.removeTag(tagBtn)
+                this.listTags.push(tag)
+                filterRecipe();
+                
+            })
+        })
+    }
+
+    removeTag(tagBtn){
+            tagBtn.querySelector(".fa-times").addEventListener("click", (event )=> {
+                event.target.closest(".activated-tag").remove()
+            })
     }
 }

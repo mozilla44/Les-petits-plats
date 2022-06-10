@@ -1,5 +1,5 @@
-import recipes from "/recipes.js";
-import Recipe from "../model/Recipe.js";
+/* import recipes from "/recipes.js";
+import Recipe from "../model/Recipe.js"; */
 
 
 
@@ -60,20 +60,11 @@ searchbar.addEventListener("keyup", () => {
     if (input.length > 2) {
         input = input.toLowerCase();
         let y = document.getElementsByClassName('recipe_card');
-        let result = [];
+
         for (let card of y) {
             card.remove()
         }
-        result = result.concat(searchRecipe(input));
-        result = result.concat(SearchIngredients(input));
-        result = result.concat(SearchDescription(input));
-        result = [...new Set(result)]
-
-        /* console.log(GetFIlteredIngredients(result))
-        console.log(GetFIlteredUstensils(result))
-        console.log(GetFilteredAppliances(result)) */
-        displayCombo(result)
-        displayRecipe(result)
+        filterRecipe();
     }
     if (input.length == 0) {
         displayRecipe(recipes)
@@ -82,6 +73,34 @@ searchbar.addEventListener("keyup", () => {
 
 displayRecipe(recipes)
 
+function filterRecipe() {
+    let input = document.getElementById('search-bar').value
+    let result = [];
+    result = result.concat(searchRecipe(input));
+    result = result.concat(SearchIngredients(input));
+    result = result.concat(SearchDescription(input));
+    result = [...new Set(result)]
+    let listtag = listcombo.map(combo => combo.listTags).flat()
+     for (let tag of listtag){
+        switch (tag.type){
+            case "ingredient": 
+            result = result.filter(recipe => recipe.ingredients.some(ingredient => ingredient.ingredient == tag.value))
+            break;
+
+            case "appliance":
+
+            break;
+
+            case "ustensils":
+
+            break;
+        }
+     }
+
+
+    displayCombo(result)
+    displayRecipe(result)
+}
 
 
 /* filter by ingredients */
@@ -135,17 +154,16 @@ function GetFilteredAppliances(listRecipe) {
 }
 
 
+let listcombo = []
 
+    listcombo.push(new combobox(document.querySelector(`.combobox[data-list="ingredient"]`), GetFIlteredIngredients))
+    listcombo.push(new combobox(document.querySelector(`.combobox[data-list="appliance"]`), GetFilteredAppliances))
+    listcombo.push(new combobox(document.querySelector('.combobox[data-list="ustensils"]'), GetFIlteredUstensils))
 
-function displayCombo (listRecipe){
-    let filterIngredient = GetFIlteredIngredients(listRecipe);
-    let combo = new combobox(document.querySelector(`.combobox[data-list="ingredient"]`),filterIngredient)
-
-    let filterAppliance = GetFilteredAppliances(listRecipe);
-    let combo2 = new combobox(document.querySelector(`.combobox[data-list="appliance"]`),filterAppliance)
-
-    let filterUstensil = GetFIlteredUstensils(listRecipe);
-    let combo3 = new combobox(document.querySelector('.combobox[data-list="ustensils"]'),filterUstensil);
+function displayCombo(listRecipe) {
+    for (let combo of listcombo){
+        combo.list = combo.filter(listRecipe)
+    }
 }
 
 displayCombo(recipes);
