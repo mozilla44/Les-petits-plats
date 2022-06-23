@@ -1,7 +1,7 @@
 
 
 class combobox {
-    constructor(element,filter) {
+    constructor(element, filter) {
         this.filter = filter;
         this.listTags = [];
         this.element = element;
@@ -48,13 +48,15 @@ class combobox {
     showCombo() {
 
         this.comboList.innerHTML = "";
-        let filteredList = this.list.filter(option => option.includes(this.input.value))
-
+        let filteredList = this.list.filter(option => option.toLowerCase().includes(this.input.value.toLowerCase()))
+        filteredList = filteredList.filter(option => !this.listTags.some(tag => tag.value == option))
         for (let option of filteredList) {
             this.comboList.insertAdjacentHTML("beforeend", `<div class="option" data-value="${option}">${option}</div>`);
         }
         this.addTag()
-        this.searchbox.querySelector(".fas").classList.add("rotate")
+        if (!this.searchbox.querySelector(".fas").classList.contains("rotate")) {
+            this.searchbox.querySelector(".fas").classList.add("rotate")
+        }
 
     }
 
@@ -70,11 +72,13 @@ class combobox {
             element.addEventListener("click", (event) => {
 
                 var tag = {
-                    value :event.target.dataset.value,
-                    type:event.target.closest(".combobox").dataset.list
+                    value: event.target.dataset.value,
+                    type: event.target.closest(".combobox").dataset.list
                 };
                 var tagBtn = document.createElement('div');
-                tagBtn.innerHTML =  tag.value + `<i class="fas fa-times"></i>`;
+                tagBtn.dataset.value = tag.value
+                tagBtn.dataset.type = tag.type
+                tagBtn.innerHTML = tag.value + `<i class="fas fa-times"></i>`;
                 tagBtn.classList.add("activated-tag")
                 tagBtn.classList.add(event.target.closest(".combobox").dataset.list)
                 document.getElementById("tags-area").appendChild(tagBtn)
@@ -82,14 +86,21 @@ class combobox {
                 this.removeTag(tagBtn)
                 this.listTags.push(tag)
                 filterRecipe();
-                
+                this.showCombo();
+
             })
         })
     }
 
-    removeTag(tagBtn){
-            tagBtn.querySelector(".fa-times").addEventListener("click", (event )=> {
-                event.target.closest(".activated-tag").remove()
-            })
+    removeTag(tagBtn) {
+        tagBtn.querySelector(".fa-times").addEventListener("click", (event) => {
+            event.target.closest(".activated-tag").remove();
+            let currentTag = event.target.closest(".activated-tag").dataset
+            this.listTags = this.listTags.filter(tag => tag.type != currentTag.type || tag.value != currentTag.value)
+
+            filterRecipe();
+
+
+        })
     }
 }

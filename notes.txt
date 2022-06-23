@@ -1,9 +1,14 @@
 
-finir breakpointsq css
-laceholder 
-tester chrome etc 
 
-finir fctn tri tags 
+
+
+
+
+finir breakpointsq css
+
+
+
+
 
 
 
