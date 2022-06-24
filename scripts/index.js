@@ -1,19 +1,47 @@
-/* import recipes from "/recipes.js";
-import Recipe from "../model/Recipe.js"; */
-
-
 
 function searchRecipe(input) {
-    let result = [];
-    for (let recipe of recipes) {
+    let result = []
+    recipes.forEach((recipe) => {
         if (recipe.name.toLowerCase().includes(input)) {
             result.push(recipe)
         }
-    }
+
+    });
+    return result;
+}
+
+/* filter */
+
+/* function searchRecipe(input){
+    return recipes.filter (recipe => recipe.name.toLowerCase().includes(input))
+    
+} */
+
+/* search by ingredient */
+
+function SearchIngredients(input) {
+    let result = [];
+
+    recipes.forEach((recipe) => {
+        if (recipe.ingredients.some(ingredient => ingredient.ingredient.toLowerCase().includes(input))) {
+            result.push(recipe)
+        }
+    })
+    return result
+}
+
+/* search by description */
+
+function SearchDescription(input) {
+    let result = [];
+    recipes.forEach((recipe) =>{
+        if (recipe.description.toLowerCase().includes(input)) {
+            result.push(recipe)
+        }
+    })
     return result
 
 }
-
 
 /* fonction d'affichage  */
 function displayRecipe(listRecipe) {
@@ -25,32 +53,6 @@ function displayRecipe(listRecipe) {
     document.getElementById("recipe-area").innerHTML = recipeDom;
 }
 
-
-/* search by ingredient */
-
-function SearchIngredients(input) {
-    let result = [];
-    for (let recipe of recipes) {
-        if (recipe.ingredients.some(ingredient => ingredient.ingredient.toLowerCase().includes(input))) {
-            result.push(recipe)
-        }
-    }
-    return result
-
-}
-
-/* search by description */
-
-function SearchDescription(input) {
-    let result = [];
-    for (let recipe of recipes) {
-        if (recipe.description.toLowerCase().includes(input)) {
-            result.push(recipe)
-        }
-    }
-    return result
-
-}
 /* eventlistener with all search functions */
 
 let searchbar = document.getElementById('search-bar');
