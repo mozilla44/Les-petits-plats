@@ -11,7 +11,6 @@ function searchRecipe(input) {
         }
     }
     return result
-
 }
 
 

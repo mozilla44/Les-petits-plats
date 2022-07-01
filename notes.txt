@@ -1,10 +1,10 @@
-
-
-
-
-
-
 finir breakpointsq css
+js bench + fiche investigation
+nettoyer code 
+commentaires + indentation
+pasage par reference js 
+
+
 
 
 
