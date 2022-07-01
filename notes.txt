@@ -9,6 +9,9 @@ pasage par reference js
 
 
 
+passage reference = récupérer la valeur  variable + modifier... et  modification reste apres run de la fonction
+
+
 
 
 

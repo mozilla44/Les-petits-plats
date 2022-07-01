@@ -13,6 +13,18 @@ main {
   min-width: 100vw;
 }
 
+@media all and (min-width: 320px) and (max-width: 560px) {
+  main nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 main #input-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -46,11 +58,31 @@ main #recipe-area {
       align-content: space-between;
 }
 
+@media all and (min-width: 320px) and (max-width: 560px) {
+  main #recipe-area {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+}
+
 main .recipe_card {
   background-color: #e6e6e6;
   width: 30%;
   border-radius: 10px;
   margin: 1em 0 1em 0;
+}
+
+@media all and (min-width: 320px) and (max-width: 560px) {
+  main .recipe_card {
+    width: 90%;
+  }
 }
 
 main .recipe_card .recipe_image {
@@ -134,6 +166,16 @@ main .recipe_card .recipe_instructions {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media all and (min-width: 320px) and (max-width: 560px) {
+  #combos {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .combobox {
@@ -151,6 +193,13 @@ main .recipe_card .recipe_instructions {
   max-width: 50%;
   /* flex-wrap: wrap; */
   /* height: 3.5em; */
+}
+
+@media all and (min-width: 320px) and (max-width: 560px) {
+  .combobox {
+    max-height: none;
+    min-width: 300px;
+  }
 }
 
 .combo {
